@@ -21,7 +21,7 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
-  Authenticator Authenticator[] @map("authenticator")
+  Authenticator Authenticator[]
 
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
@@ -80,8 +80,8 @@ model Authenticator {
   providerAccountId    String  @map("provider_account_id")
   credentialPublicKey  String  @map("credential_public_key")
   counter              Int
-  credentialDeviceType String  @map("credential_")
-  credentialBackedUp   Boolean @map("credential_")
+  credentialDeviceType String  @map("credential_device_type")
+  credentialBackedUp   Boolean @map("credential_backed_up")
   transports           String?
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
