@@ -1,6 +1,8 @@
 import { ArrowRightIcon } from 'lucide-react'
 import Link from 'next/link'
 
+import './styles.css'
+
 import { SiteFooter } from './components/site-footer'
 import { SiteHeader } from './components/site-header'
 
