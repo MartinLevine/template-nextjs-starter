@@ -4,6 +4,15 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@utility hex-shape {
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+@utility hex-container {
+    @apply hex-shape flex items-center justify-center;
+    aspect-ratio: 1 / 1.15;
+}
+
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
