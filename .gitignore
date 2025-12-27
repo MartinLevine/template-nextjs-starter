@@ -43,5 +43,5 @@ next-env.d.ts
 .vscode
 .idea
 
-data
+./data
 /src/database/prisma
